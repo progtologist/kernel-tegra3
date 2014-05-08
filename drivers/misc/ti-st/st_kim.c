@@ -40,6 +40,11 @@
 
 
 #define MAX_ST_DEVICES	3	/* Imagine 1 on each UART for now */
+
+#ifdef CONFIG_BT_TIBLUESLEEP
+	int bluesleep_start(struct uart_port *uport);
+#endif
+
 static struct platform_device *st_kim_devices[MAX_ST_DEVICES];
 
 /**********************************************************************/
